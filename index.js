@@ -15,10 +15,8 @@ app.use("/", userRoute);
 app.use("/", jobRoute);
 app.get("/", (req, res) => res.send("welcome"));
 
-mongoose.connect("mongodb://localhost:27017/mock13").then(() => {
+mongoose.connect("mongodb+srv://masthotel:masthotel@masthotel.orap6vu.mongodb.net/mock13?retryWrites=true&w=majority").then(() => {
   app.listen(config.port, () => {
     console.log(`Server started on ${config.port}`);
   });
 });
-// mongodb://localhost:27017
-//mongodb+srv://masthotel:masthotel@masthotel.orap6vu.mongodb.net/mock12?retryWrites=true&w=majority
